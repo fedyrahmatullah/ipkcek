@@ -10,6 +10,8 @@
 	$nomor = 0;
 	$totalmutu = 0;
 	$totalsks = 0;
+
+	$output = number_format($totalipk, 2, '.', '');
 	// pengooperasian
 	for ($i=0; $i < $baris; $i++) { 
 		$ipsemester[$i] = ($_POST["mutu"][$i]/$_POST["sks"][$i]);
@@ -19,7 +21,7 @@
 		// $totalJam[$i] = $_POST["sks"][$i] * $_POST["pemakaian"];
 		$totalmutu += $_POST["mutu"][$i];
 		$totalsks += $_POST["sks"][$i];
-		$totalipk += $ipsemester[$i];
+		$totalipk += $ipsemester[$i].$output;
 	}
  ?>
 <!DOCTYPE html>
@@ -73,7 +75,7 @@
 	<?php endfor ?>
 	<tr class="title">
 		<td colspan="7">
-			Total Tarif Listrik Perhari Rp. <?= $totalmutu/$totalsks; ?><br>
+			Total IPK <?= $totalmutu/$totalsks; ?><br>
 			<!-- Total IPK <?= $_POST["pemakaian"]; ?> Hari Rp. <?= $totalipk; ?>	 -->
 			</td>
 	</tr>

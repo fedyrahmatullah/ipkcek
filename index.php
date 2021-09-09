@@ -70,10 +70,7 @@ require 'variable.php';
 	</div>
 	<div class="clear"></div>
 	<div class="foother">
-			<!-- <label for="tarif" class="label">Tarif: </label> -->
-			<!-- <input min="1"  type="number" id="tarif" name="tarif" required="" placeholder="Tarif listrik perKWh Rp."> -->
-			<!-- <label for="pemakaian" class="label">Pemakaian: </label> -->
-			<!-- <input min="1" type="number" id="pemakaian" name="pemakaian" required="" placeholder="Listrik Dalam Berapa hari"> -->
+		
 			<input type="text" id="jml_semester" name="jml_semester" value="<?= $_POST["j_semester"]; ?>" hidden="hidden">
 			<button type="submit" id="enter" name="enter">Submit</button>
 		</form>
