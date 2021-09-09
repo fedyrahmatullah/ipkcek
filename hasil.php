@@ -67,12 +67,12 @@
 			<!-- <td class="centers"><?= $totalJam[$i]; ?></td> -->
 
 			<!-- <td class="centers"><?= $tarifPerHari[$i]; ?></td> -->
-			<td class="centers"><?= $ipsemester[$i]; ?></td>
+			<td class="centers"><?= number_format((float)$ipsemester[$i], 2, '.', ''); ?></td>
 		</tr>
 	<?php endfor ?>
 	<tr class="title">
 		<td colspan="7">
-			Total IPK <?= $totalipk; ?><br>
+			Total IPK <?= number_format((float)$totalipk, 2, '.', ''); ?><br>
 			<!-- Total IPK <?= $_POST["pemakaian"]; ?> Hari Rp. <?= $totalipk; ?>	 -->
 			</td>
 	</tr>
