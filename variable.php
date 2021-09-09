@@ -12,7 +12,7 @@ $total = [
 	"","","","","","","","","","",
 	"","","","","","","","","",""
 	];
-$judul ="Aplikasi perhitungan IPK";
+$judul ="Aplikasi Penghitung IPK";
 // $header = "<div class=\"header\">" . $judul . "</div>";
 $header = "
 <title>" . $judul . "</title>

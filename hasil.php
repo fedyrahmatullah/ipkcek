@@ -64,9 +64,6 @@
 			<!-- <td class="centers"><?= $_POST["nama"][$i]; ?></td> -->
 			<td class="centers"><?= $_POST["mutu"][$i]; ?></td>
 			<td class="centers"><?= $_POST["sks"][$i]; ?> sks</td>
-			<!-- <td class="centers"><?= $totalJam[$i]; ?></td> -->
-
-			<!-- <td class="centers"><?= $tarifPerHari[$i]; ?></td> -->
 			<td class="centers"><?= number_format((float)$ipsemester[$i], 2, '.', ''); ?></td>
 		</tr>
 	<?php endfor ?>

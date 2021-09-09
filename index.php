@@ -58,11 +58,11 @@ require 'variable.php';
 					</div> -->
 					<div class="form-group">
 						<label for="sks<?= $i; ?>">Jumlah SKS: </label><br>
-						<input min="1" type="number" id="sks<?= $i; ?>" name="sks[]" required="" placeholder="Jumlah SKS Semester ini">
+						<input min="1" type="number" id="sks<?= $i; ?>" name="sks[]" required="" placeholder="Jumlah SKS Semester <?= $i; ?>">
 					</div>
 					<div class="form-group">
 						<label for="mutu<?= $i; ?>">Nilai Mutu per Semester: </label><br>
-						<input min="1" type="number_float" id="mutu<?= $i; ?>" name="mutu[]" required="" placeholder="Jumlah Nilai Mutu Semester ini">
+						<input min="1" type="number_float" id="mutu<?= $i; ?>" name="mutu[]" required="" placeholder="Jumlah Nilai Mutu Semester <?= $i; ?>">
 					</div>
 				</div>
 			<?php endfor ?>
@@ -70,7 +70,7 @@ require 'variable.php';
 	</div>
 	<div class="clear"></div>
 	<div class="foother">
-		
+
 			<input type="text" id="jml_semester" name="jml_semester" value="<?= $_POST["j_semester"]; ?>" hidden="hidden">
 			<button type="submit" id="enter" name="enter">Submit</button>
 		</form>
