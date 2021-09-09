@@ -11,17 +11,14 @@
 	$totalmutu = 0;
 	$totalsks = 0;
 
-	$output = number_format($totalipk, 2, '.', '');
-	// pengooperasian
+	// $output = number_format($totalipk, 2, '.', '');
+	// algoritm
 	for ($i=0; $i < $baris; $i++) { 
 		$ipsemester[$i] = ($_POST["mutu"][$i]/$_POST["sks"][$i]);
-		// $ipsemester[$i] *= $_POST["tarif"]; // pemakaian harian
-		// $tarifPerHari[$i] = $ipsemester[$i];
-		// $ipsemester[$i] *= $_POST["pemakaian"];
-		// $totalJam[$i] = $_POST["sks"][$i] * $_POST["pemakaian"];
 		$totalmutu += $_POST["mutu"][$i];
 		$totalsks += $_POST["sks"][$i];
-		$totalipk += $ipsemester[$i].$output;
+		$totalipk = $totalmutu/$totalsks;
+		
 	}
  ?>
 <!DOCTYPE html>
@@ -75,7 +72,7 @@
 	<?php endfor ?>
 	<tr class="title">
 		<td colspan="7">
-			Total IPK <?= $totalmutu/$totalsks; ?><br>
+			Total IPK <?= $totalipk; ?><br>
 			<!-- Total IPK <?= $_POST["pemakaian"]; ?> Hari Rp. <?= $totalipk; ?>	 -->
 			</td>
 	</tr>
